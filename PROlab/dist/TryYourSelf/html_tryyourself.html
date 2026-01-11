@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Try HTML | PROLAB</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+.flash {
+  animation: flashBg 0.4s ease;
+}
+@keyframes flashBg {
+  from { background-color: #bbf7d0; }
+  to { background-color: transparent; }
+}
+</style>
+</head>
+
+<body id="body" class="bg-gray-200 transition-colors duration-300">
+
+<!-- TOP BAR -->
+<div id="topbar"
+  class="flex items-center justify-between
+  bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-400
+  px-4 py-3 shadow-lg text-white">
+
+  <!-- LEFT ICONS -->
+  <div class="flex items-center gap-5 text-xl">
+
+   <!-- BACK ARROW -->
+  <a href="http://127.0.0.1:5500/languges/html.html"><i onclick="history.back()"
+     class="fa fa-arrow-left cursor-pointer
+            hover:scale-125 hover:text-yellow-300"
+     title="Go Back"></i></a>
+
+    <a href="http://127.0.0.1:5500/dist/index.html">
+      <i class="fa fa-house cursor-pointer hover:text-yellow-400 hover:scale-125"></i>
+    </a>
+
+    <i onclick="refreshCode()"
+       class="fa fa-arrows-rotate cursor-pointer hover:text-green-500 hover:rotate-180 hover:scale-125"
+       title="Reset Code"></i>
+
+    <i id="rotateBtn"
+       onclick="toggleRotate()"
+       class="fas fa-angle-double-down cursor-pointer hover:text-indigo-500 hover:scale-125"
+       title="Rotate Layout"></i>
+
+    <i id="themeBtn"
+       onclick="toggleTheme()"
+       class="fa fa-circle-half-stroke cursor-pointer hover:text-red-600 hover:scale-125"
+       title="Change Theme"></i>
+  </div>
+
+  <!-- RUN BUTTON -->
+  <button onclick="runCode()"
+    class="bg-green-500 px-7 py-2 rounded-full font-semibold
+    flex items-center gap-2
+    hover:bg-green-600 hover:-translate-y-1
+    hover:shadow-[0_12px_30px_rgba(34,197,94,0.6)]">
+    Run <i class="fa fa-play"></i>
+  </button>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div id="mainLayout"
+  class="grid grid-cols-1 md:grid-cols-2 h-[calc(100vh-56px)] transition-all">
+
+  <!-- CODE EDITOR -->
+  <textarea id="editor"
+    class="w-full h-full p-6 font-mono text-[15px]
+    bg-white text-black outline-none resize-none border-r
+    leading-7 transition-all
+    focus:ring-4 focus:ring-indigo-400/40">
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Page</title>
+</head>
+<body>
+  <h1 style="color: green;">Hello PROLAB 🚀</h1>
+  <p>This is live HTML output.</p>
+</body>
+</html>
+
+  </textarea>
+
+  <!-- OUTPUT -->
+  <div id="outputBox"
+    class="bg-white border-4 border-gray-400 p-0 overflow-hidden shadow-xl">
+
+    <iframe id="outputFrame"
+      class="w-full h-full bg-white"></iframe>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+let rotated = false;
+let darkMode = false;
+
+function toggleRotate() {
+  rotated = !rotated;
+  const layout = document.getElementById("mainLayout");
+  const rotateBtn = document.getElementById("rotateBtn");
+
+  if (rotated) {
+    layout.className = "flex flex-col h-[calc(100vh-56px)] transition-all";
+    rotateBtn.classList.add("rotate-180", "text-indigo-500");
+  } else {
+    layout.className = "grid grid-cols-1 md:grid-cols-2 h-[calc(100vh-56px)] transition-all";
+    rotateBtn.classList.remove("rotate-180", "text-indigo-500");
+  }
+}
+
+function toggleTheme() {
+  darkMode = !darkMode;
+
+  const body = document.getElementById("body");
+  const editor = document.getElementById("editor");
+  const outputBox = document.getElementById("outputBox");
+  const topbar = document.getElementById("topbar");
+  const themeBtn = document.getElementById("themeBtn");
+
+  if (darkMode) {
+    body.className = "bg-[#1e1e1e] transition-colors duration-300";
+    topbar.className = "flex items-center justify-between bg-[#2d2d2d] px-4 py-2 shadow";
+
+    editor.className = editor.className.replace(
+      "bg-white text-black",
+      "bg-[#1e1e1e] text-white"
+    );
+
+    outputBox.className =
+      "bg-black border-4 border-gray-700 text-green-400 p-6 font-mono text-[15px] overflow-auto transition-all hover:border-green-400";
+
+    themeBtn.classList.replace("fa-circle-half-stroke", "fa-moon");
+    themeBtn.classList.add("text-green-400");
+  } else {
+    location.reload();
+  }
+}
+
+function runCode() {
+  const code = document.getElementById("editor").value;
+  document.getElementById("output").innerText =
+    code.includes("Hello World") ? "Hello World!" : "⚠ Output simulation only.";
+}
+
+function refreshCode() {
+  const editor = document.getElementById("editor");
+  editor.value = `#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello World!";
+    return 0;
+}`;
+  document.getElementById("output").innerText = "Hello World!";
+  editor.classList.add("flash");
+  setTimeout(() => editor.classList.remove("flash"), 400);
+}
+</script>
+
+<!-- FOOTER -->
+<footer class="text-center py-6 bg-black/80 text-gray-400">
+  &copy; 2025 <span class="text-yellow-400 font-semibold">PROLAB</span>. All rights reserved.
+</footer>
+
+</body>
+</html>

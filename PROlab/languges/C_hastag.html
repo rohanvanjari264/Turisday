@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# Notes | PROlab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800 pt-20">
+
+<!-- Header -->
+<header class="bg-gradient-to-r from-purple-700 to-violet-600 text-white py-8 shadow-lg">
+  <div class="container mx-auto px-6">
+    <h1 class="text-4xl font-extrabold">💜 C# Notes</h1>
+    <p class="text-purple-100 mt-2 text-lg">
+      Learn C# Programming from Basics to Advanced – PROlab
+    </p>
+  </div>
+</header>
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full bg-black border-b border-gray-700 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="http://127.0.0.1:5500/dist/index.html" class="text-yellow-400 font-bold text-xl flex items-center gap-2">
+      <i class="fa fa-house"></i> PROLAB
+    </a>
+   <div class="space-x-6 text-gray-300 flex items-center">
+  <a href="http://127.0.0.1:5500/dist/OurCources.html" class="hover:text-yellow-400">Courses</a>
+  <a href="http://127.0.0.1:5500/dist/comingsoonpage.html" class="hover:text-yellow-400">Roadmap</a>
+  <a href="http://127.0.0.1:5500/dist/index.html#contact" class="hover:text-yellow-400">Contact</a>
+
+  <!-- Try Yourself -->
+  <a href="http://127.0.0.1:5500/dist/TryYourSelf/C_hashtag.html"
+     class="ml-4 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-semibold shadow-md transition">
+    ▶ Try Yourself
+  </a>
+</div>
+
+  </div>
+</nav>
+
+
+
+
+  <div class="space-y-10">
+
+    <!-- 1 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-purple-700 mb-3">📌 1. What is C#?</h3>
+      <p class="text-gray-700 mb-3">
+        C# is a <strong>high-level, object-oriented, modern programming language</strong>
+        developed by Microsoft for building secure and scalable applications.
+      </p>
+      <ul class="list-disc pl-6 space-y-1 text-gray-700">
+        <br><h4>Explanation:</h4>
+        <li><strong>Object-Oriented:</strong> Uses classes and objects.</li>
+        <li><strong>Type-Safe:</strong> Prevents type-related errors.</li>
+        <li><strong>Modern:</strong> Supports LINQ, async/await.</li>
+        <li><strong>Managed:</strong> Automatic memory management.</li>
+        <li><strong>Applications:</strong> Web, Desktop, Games, Cloud.</li>
+      </ul>
+    </div>
+
+    <!-- 2 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-purple-700 mb-3">🧾 2. First C# Program</h3>
+      <pre class="bg-gray-900 text-purple-300 p-4 rounded-lg overflow-auto text-sm">
+using System;
+
+class Hello {
+    static void Main() {
+        Console.WriteLine("Hello, World!");
+    }
+}
+      </pre>
+      <p class="text-gray-700 mt-2">
+        <br><h4>Explanation:</h4>
+        <strong>Console.WriteLine()</strong> prints output to the console.
+        This program confirms C# is installed correctly.
+      </p>
+    </div>
+
+    <!-- 3 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-purple-700 mb-3">🔢 3. Variables & Data Types</h3>
+      <pre class="bg-gray-900 text-purple-300 p-4 rounded-lg overflow-auto text-sm">
+string name = "Alice";
+int age = 25;
+double height = 5.6;
+bool isActive = true;
+      </pre>
+      <p class="text-gray-700 mt-2">
+        <br><h4>Explanation:</h4>
+        Variables store data in memory. C# is <strong>statically typed</strong>,
+        so data types must be declared explicitly.
+      </p>
+      <ul class="list-disc pl-6 text-gray-700 mt-2">
+        <h4>Explanation:</h4>
+        <li><strong>string</strong> – Text</li>
+        <li><strong>int</strong> – Integers</li>
+        <li><strong>double</strong> – Decimal numbers</li>
+        <li><strong>bool</strong> – true / false</li>
+      </ul>
+    </div>
+
+    <!-- 4 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-purple-700 mb-3">📥 4. Input & Output</h3>
+      <pre class="bg-gray-900 text-purple-300 p-4 rounded-lg overflow-auto text-sm">
+string name = Console.ReadLine();
+Console.WriteLine("Hello " + name);
+      </pre>
+      <p class="text-gray-700 mt-2"><br>
+        <h4>Explanation:</h4>
+        <strong>Console.ReadLine()</strong> is used for input.
+        <strong>Console.WriteLine()</strong> outputs data.
+      </p>
+    </div>
+
+    <!-- 5 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-purple-700 mb-3">➕ 5. Operators</h3>
+      <ul class="list-disc pl-6 text-gray-700 space-y-1">
+        <li><strong>Arithmetic:</strong> +, -, *, /, %</li>
+        <li><strong>Relational:</strong> ==, !=, &gt;, &lt;, &gt;=</li>
+        <li><strong>Logical:</strong> &&, ||, !</li>
+        <li><strong>Assignment:</strong> =, +=, -=</li>
+      </ul>
+    </div>
+
+    <!-- 6 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-purple-700 mb-3">🔁 6. Conditional Statements</h3>
+      <pre class="bg-gray-900 text-purple-300 p-4 rounded-lg overflow-auto text-sm">
+int age = 20;
+if(age >= 18) {
+    Console.WriteLine("Adult");
+} else {
+    Console.WriteLine("Minor");
+}
+      </pre>
+      <p class="text-gray-700 mt-2"><br>
+        <h4>Explanation:</h4>
+        Conditional statements control the flow of execution.
+      </p>
+    </div>
+
+    <!-- 7 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-purple-700 mb-3">🔄 7. Loops</h3>
+      <pre class="bg-gray-900 text-purple-300 p-4 rounded-lg overflow-auto text-sm">
+for(int i = 1; i <= 5; i++) {
+    Console.WriteLine(i);
+}
+
+int i = 1;
+while(i <= 5) {
+    Console.WriteLine(i);
+    i++;
+}
+      </pre>
+      <p class="text-gray-700 mt-2"><br>
+        <h4>Explanation:</h4>
+        1. Loops repeat code.<br>
+        2. <strong>for</strong> loop when iterations are known.<br>
+        3. <strong>while</strong> loop when condition-based.
+      </p>
+    </div>
+
+    <!-- 8 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-purple-700 mb-3">📦 8. Functions (Methods)</h3>
+      <pre class="bg-gray-900 text-purple-300 p-4 rounded-lg overflow-auto text-sm">
+static int Add(int a, int b) {
+    return a + b;
+}
+      </pre>
+      <p class="text-gray-700 mt-2"><br>
+        <h4>Explanation:</h4>
+        1. Methods are reusable blocks of code.<br>
+        2. Improve modularity.<br>
+        3. <strong>return</strong> sends value back.
+      </p>
+    </div>
+
+    <!-- 9 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-purple-700 mb-3">📚 9. Arrays & Collections</h3>
+      <pre class="bg-gray-900 text-purple-300 p-4 rounded-lg overflow-auto text-sm">
+int[] arr = {1,2,3};
+List<string> list = new List<string>();
+      </pre>
+      <p class="text-gray-700 mt-2"><br>
+        <h4>Explanation:</h4>
+        1. Arrays are fixed size.<br>
+        2. List is dynamic.<br>
+        3. Collections store objects.
+      </p>
+    </div>
+
+    <!-- 10 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-purple-700 mb-3">🗂 10. Classes & Objects</h3>
+      <pre class="bg-gray-900 text-purple-300 p-4 rounded-lg overflow-auto text-sm">
+class Student {
+    public string Name;
+    public int Age;
+}
+      </pre>
+      <p class="text-gray-700 mt-2">
+        <h4>Explanation:</h4>
+        Class is a blueprint. Object is an instance.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Back Button -->
+<div class="text-center my-10">
+  <a href="http://127.0.0.1:5500/dist/index.html"
+     class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-xl shadow-lg transition">
+    ⬅️ Back to Home
+  </a>
+</div>
+
+<footer class="bg-purple-700 text-white text-center py-4">
+  <p>&copy; 2025 PROlab | Learn. Code. Grow.</p>
+</footer>
+
+</body>
+</html>
+
+

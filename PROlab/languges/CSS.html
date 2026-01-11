@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Notes | PROlab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 to-pink-50 text-gray-800 pt-20">
+
+<!-- Header -->
+<header class="bg-gradient-to-r from-pink-600 to-purple-600 text-white py-8 shadow-lg">
+  <div class="container mx-auto px-6">
+    <h1 class="text-4xl font-extrabold">🎨 CSS Notes</h1>
+    <p class="text-pink-100 mt-2 text-lg">
+      Learn CSS from Basics to Advanced – PROlab
+    </p>
+  </div>
+</header>
+
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full bg-black border-b border-gray-700 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="http://127.0.0.1:5500/dist/index.html" class="text-yellow-400 font-bold text-xl flex items-center gap-2">
+      <i class="fa fa-house"></i> PROLAB
+    </a>
+    <div class="space-x-6 text-gray-300">
+      <a href="http://127.0.0.1:5500/dist/OurCources.html" class="hover:text-yellow-400">Courses</a>
+      <a href="#http://127.0.0.1:5500/dist/comingsoonpage.html"hover:text-yellow-400">Roadmap</a>
+      <a href="http://127.0.0.1:5500/dist/index.html#contact" class="hover:text-yellow-400">Contact</a>
+     <!-- Try Yourself -->
+   <a href="http://127.0.0.1:5500/dist/TryYourSelf/CSS_tryyourself.html"
+         class="ml-4 bg-orange-600 hover:bg-orange-700 text-white
+                px-4 py-2 rounded-lg font-semibold shadow-md transition">
+        ▶ Try Yourself
+      </a>
+</div>
+    </div>
+  </div>
+</nav>
+
+<section class="py-14 px-4 md:px-12 lg:px-24">
+  <h2 class="text-4xl font-bold text-center text-pink-700 mb-12">
+    📘 Cascading Style Sheets (CSS) – Detailed Notes
+  </h2>
+
+  <div class="space-y-10">
+
+    <!-- 1 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-pink-700 mb-3">📌 1. What is CSS?</h3>
+      <p class="text-gray-700 mb-3">
+        CSS is a <strong>style sheet language</strong> used to describe the presentation of
+        HTML elements on a web page.
+      </p>
+      <ul class="list-disc pl-6 space-y-1 text-gray-700">
+        <br><h4>Explanation:</h4>
+        <li><strong>Controls Design:</strong> Colors, layout, fonts.</li>
+        <li><strong>Separation:</strong> Separates content from design.</li>
+        <li><strong>Reusable:</strong> Same style for multiple pages.</li>
+        <li><strong>Responsive:</strong> Works on all screen sizes.</li>
+        <li><strong>Used With:</strong> HTML & JavaScript.</li>
+      </ul>
+    </div>
+
+    <!-- 2 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-pink-700 mb-3">🧾 2. CSS Syntax</h3>
+      <pre class="bg-gray-900 text-pink-300 p-4 rounded-lg overflow-auto text-sm">
+selector {
+    property: value;
+}
+      </pre>
+      <p class="text-gray-700 mt-2">
+        <br><h4>Explanation:</h4>
+        A CSS rule consists of a <strong>selector</strong> and a <strong>declaration block</strong>.
+      </p>
+    </div>
+
+    <!-- 3 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-pink-700 mb-3">🔢 3. CSS Selectors</h3>
+      <pre class="bg-gray-900 text-pink-300 p-4 rounded-lg overflow-auto text-sm">
+p { color: red; }
+#id { color: blue; }
+.class { color: green; }
+      </pre>
+      <p class="text-gray-700 mt-2">
+        <br><h4>Explanation:</h4>
+        Selectors target HTML elements to apply styles.
+      </p>
+      <ul class="list-disc pl-6 text-gray-700 mt-2">
+        <h4>Explanation:</h4>
+        <li><strong>Element</strong> – Targets tag</li>
+        <li><strong>ID</strong> – Unique element</li>
+        <li><strong>Class</strong> – Multiple elements</li>
+      </ul>
+    </div>
+
+    <!-- 4 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-pink-700 mb-3">📥 4. Colors & Backgrounds</h3>
+      <pre class="bg-gray-900 text-pink-300 p-4 rounded-lg overflow-auto text-sm">
+body {
+    background-color: lightblue;
+    color: black;
+}
+      </pre>
+      <p class="text-gray-700 mt-2"><br>
+        <h4>Explanation:</h4>
+        Used to control text color and background styles.
+      </p>
+    </div>
+
+    <!-- 5 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-pink-700 mb-3">➕ 5. CSS Box Model</h3>
+      <ul class="list-disc pl-6 text-gray-700 space-y-1">
+        <li><strong>Content</strong></li>
+        <li><strong>Padding</strong></li>
+        <li><strong>Border</strong></li>
+        <li><strong>Margin</strong></li>
+      </ul>
+    </div>
+
+    <!-- 6 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-pink-700 mb-3">🔁 6. Display & Position</h3>
+      <pre class="bg-gray-900 text-pink-300 p-4 rounded-lg overflow-auto text-sm">
+div {
+    display: flex;
+    position: relative;
+}
+      </pre>
+      <p class="text-gray-700 mt-2"><br>
+        <h4>Explanation:</h4>
+        Controls how elements are displayed and positioned.
+      </p>
+    </div>
+
+    <!-- 7 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-pink-700 mb-3">🔄 7. Flexbox</h3>
+      <pre class="bg-gray-900 text-pink-300 p-4 rounded-lg overflow-auto text-sm">
+.container {
+    display: flex;
+    justify-content: center;
+}
+      </pre>
+      <p class="text-gray-700 mt-2"><br>
+        <h4>Explanation:</h4>
+        1. One-dimensional layout.<br>
+        2. Aligns items easily.<br>
+        3. Responsive design support.
+      </p>
+    </div>
+
+    <!-- 8 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-pink-700 mb-3">📦 8. CSS Grid</h3>
+      <pre class="bg-gray-900 text-pink-300 p-4 rounded-lg overflow-auto text-sm">
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+      </pre>
+      <p class="text-gray-700 mt-2"><br>
+        <h4>Explanation:</h4>
+        1. Two-dimensional layout system.<br>
+        2. Controls rows & columns.<br>
+        3. Powerful for page layout.
+      </p>
+    </div>
+
+    <!-- 9 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-pink-700 mb-3">📚 9. Responsive Design</h3>
+      <pre class="bg-gray-900 text-pink-300 p-4 rounded-lg overflow-auto text-sm">
+@media (max-width: 768px) {
+    body {
+        background-color: lightpink;
+    }
+}
+      </pre>
+      <p class="text-gray-700 mt-2"><br>
+        <h4>Explanation:</h4>
+        Makes websites adapt to different screen sizes.
+      </p>
+    </div>
+
+    <!-- 10 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-pink-700 mb-3">🗂 10. CSS Animations</h3>
+      <pre class="bg-gray-900 text-pink-300 p-4 rounded-lg overflow-auto text-sm">
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+      </pre>
+      <p class="text-gray-700 mt-2">
+        <h4>Explanation:</h4>
+        Used to animate elements smoothly.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Back Button -->
+<div class="text-center my-10">
+  <a href="http://127.0.0.1:5500/dist/index.html"
+     class="inline-block bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-xl shadow-lg transition">
+    ⬅️ Back to Home
+  </a>
+</div>
+
+<footer class="bg-pink-600 text-white text-center py-4">
+  <p>&copy; 2025 PROlab | Learn. Code. Grow.</p>
+</footer>
+
+</body>
+</html>
+
+

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Try CSS | PROLAB</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+.flash {
+  animation: flashBg 0.4s ease;
+}
+@keyframes flashBg {
+  from { background-color: #bfdbfe; }
+  to { background-color: transparent; }
+}
+</style>
+</head>
+
+<body id="body" class="bg-gray-200 transition-colors duration-300">
+
+<!-- TOP BAR -->
+<div id="topbar"
+  class="flex items-center justify-between
+         bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-400
+         px-4 py-3 shadow-lg text-white">
+
+  <!-- LEFT ICONS -->
+  <div class="flex items-center gap-5 text-xl">
+
+       <!-- BACK ARROW -->
+  <a href="http://127.0.0.1:5500/languges/CSS.html"><i onclick="history.back()"
+     class="fa fa-arrow-left cursor-pointer
+            hover:scale-125 hover:text-yellow-300"
+     title="Go Back"></i></a>
+    <a href="index.html">
+      <i class="fa fa-house cursor-pointer transition-all duration-300
+         hover:text-yellow-300 hover:scale-125"></i>
+    </a>
+
+    <i onclick="refreshCode()"
+       class="fa fa-arrows-rotate cursor-pointer transition-all duration-300
+       hover:text-green-400 hover:rotate-180 hover:scale-125"></i>
+
+    <i id="rotateBtn"
+       onclick="toggleRotate()"
+       class="fas fa-angle-double-down cursor-pointer transition-all duration-300
+       hover:text-indigo-300 hover:scale-125"></i>
+
+    <i onclick="toggleTheme()"
+       class="fa fa-circle-half-stroke cursor-pointer transition-all duration-300
+       hover:text-red-400 hover:scale-125"></i>
+  </div>
+
+  <!-- RUN BUTTON -->
+  <button onclick="runCode()"
+    class="bg-green-500 px-7 py-2 rounded-full font-semibold
+           flex items-center gap-2
+           transition-all duration-300
+           hover:bg-green-600 hover:-translate-y-1
+           hover:shadow-[0_12px_30px_rgba(34,197,94,0.6)]">
+    Run <i class="fa fa-play"></i>
+  </button>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div id="mainLayout"
+  class="grid grid-cols-1 md:grid-cols-2 h-[calc(100vh-56px)] transition-all">
+
+  <!-- CSS EDITOR -->
+  <textarea id="editor"
+    class="w-full h-full p-6 font-mono text-[15px]
+           bg-white text-black outline-none resize-none border-r
+           leading-7 transition-all duration-300
+           hover:shadow-inner
+           focus:ring-4 focus:ring-blue-400/40">
+/* Write your CSS here */
+
+body {
+  background-color: #f3f4f6;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(to right, #3b82f6, #06b6d4);
+  border-radius: 16px;
+}
+  </textarea>
+
+  <!-- OUTPUT / PREVIEW -->
+  <div id="outputBox"
+    class="bg-white border-4 border-gray-400
+           p-6 overflow-auto shadow-xl
+           transition-all duration-300
+           hover:border-blue-400">
+
+    <div id="preview"
+      class="box mx-auto mt-10">
+    </div>
+
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+let rotated = false;
+let darkMode = false;
+
+function toggleRotate() {
+  rotated = !rotated;
+  const layout = document.getElementById("mainLayout");
+  layout.className = rotated
+    ? "flex flex-col h-[calc(100vh-56px)] transition-all"
+    : "grid grid-cols-1 md:grid-cols-2 h-[calc(100vh-56px)] transition-all";
+}
+
+function toggleTheme() {
+  darkMode = !darkMode;
+  if (darkMode) {
+    body.className = "bg-[#1e1e1e]";
+    editor.classList.replace("bg-white", "bg-[#1e1e1e]");
+    editor.classList.replace("text-black", "text-white");
+    outputBox.classList.replace("bg-white", "bg-[#111]");
+  } else {
+    location.reload();
+  }
+}
+
+function runCode() {
+  let styleTag = document.getElementById("liveStyle");
+  if (!styleTag) {
+    styleTag = document.createElement("style");
+    styleTag.id = "liveStyle";
+    document.head.appendChild(styleTag);
+  }
+  styleTag.innerHTML = editor.value;
+}
+
+function refreshCode() {
+  editor.value = `/* Write your CSS here */
+
+body {
+  background-color: #f3f4f6;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(to right, #3b82f6, #06b6d4);
+  border-radius: 16px;
+}`;
+  editor.classList.add("flash");
+  setTimeout(() => editor.classList.remove("flash"), 400);
+}
+</script>
+
+<footer class="text-center py-6 bg-black/80 text-gray-400">
+© 2025 <span class="text-yellow-400 font-semibold">PROLAB</span>. All rights reserved.
+</footer>
+
+</body>
+</html>

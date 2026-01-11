@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PHP Notes | PROlab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 to-indigo-50 text-gray-800 pt-20">
+
+<!-- Header -->
+<header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-8 shadow-lg">
+  <div class="container mx-auto px-6">
+    <h1 class="text-4xl font-extrabold">🐘 PHP Notes</h1>
+    <p class="text-indigo-100 mt-2 text-lg">
+      Learn PHP Programming from Basics to Advanced – PROlab
+    </p>
+  </div>
+</header>
+
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full bg-black border-b border-gray-700 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="http://127.0.0.1:5500/dist/index.html" class="text-yellow-400 font-bold text-xl flex items-center gap-2">
+      <i class="fa fa-house"></i> PROLAB
+    </a>
+    <div class="space-x-6 text-gray-300">
+      <a href="http://127.0.0.1:5500/dist/OurCources.html" class="hover:text-yellow-400">Courses</a>
+      <a href="http://127.0.0.1:5500/dist/comingsoonpage.html" class="hover:text-yellow-400">Roadmap</a>
+      <a href="http://127.0.0.1:5500/dist/index.html#contact" class="hover:text-yellow-400">Contact</a>
+     <!-- Try Yourself -->
+   <a href="http://127.0.0.1:5500/dist/TryYourSelf/PHP_tryyourself.html"
+         class="ml-4 bg-orange-600 hover:bg-orange-700 text-white
+                px-4 py-2 rounded-lg font-semibold shadow-md transition">
+        ▶ Try Yourself
+      </a>
+</div>
+    </div>
+  </div>
+</nav>
+
+<section class="py-14 px-4 md:px-12 lg:px-24">
+  <h2 class="text-4xl font-bold text-center text-indigo-700 mb-12">
+    📘 PHP Programming Language – Detailed Notes
+  </h2>
+
+  <div class="space-y-10">
+
+    <!-- 1 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-indigo-700 mb-3">📌 1. What is PHP?</h3>
+      <p class="text-gray-700 mb-3">
+        PHP (<strong>Hypertext Preprocessor</strong>) is a
+        <strong>server-side scripting language</strong> used to build dynamic websites.
+      </p>
+      <ul class="list-disc pl-6 space-y-1 text-gray-700">
+        <li>Executed on server</li>
+        <li>Embedded inside HTML</li>
+        <li>Open-source & free</li>
+        <li>Used with MySQL</li>
+        <li>Web backend development</li>
+      </ul>
+    </div>
+
+    <!-- 2 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-indigo-700 mb-3">🧾 2. First PHP Program</h3>
+      <pre class="bg-gray-900 text-indigo-300 p-4 rounded-lg overflow-auto text-sm">
+&lt;?php
+echo "Hello, World!";
+?&gt;
+      </pre>
+      <p class="text-gray-700 mt-2">
+        <strong>echo</strong> is used to print output in PHP.
+      </p>
+    </div>
+
+    <!-- 3 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-indigo-700 mb-3">🔢 3. Variables & Data Types</h3>
+      <pre class="bg-gray-900 text-indigo-300 p-4 rounded-lg overflow-auto text-sm">
+$name = "Alice";
+$age = 25;
+$height = 5.6;
+$isActive = true;
+      </pre>
+      <ul class="list-disc pl-6 text-gray-700 mt-2">
+        <li>Variables start with <strong>$</strong></li>
+        <li>No need to declare data type</li>
+        <li>Dynamically typed language</li>
+      </ul>
+    </div>
+
+    <!-- 4 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-indigo-700 mb-3">📥 4. Input & Output</h3>
+      <pre class="bg-gray-900 text-indigo-300 p-4 rounded-lg overflow-auto text-sm">
+&lt;form method="post"&gt;
+  &lt;input name="username"&gt;
+&lt;/form&gt;
+
+&lt;?php
+echo $_POST['username'];
+?&gt;
+      </pre>
+      <p class="text-gray-700 mt-2">
+        PHP receives input using <strong>$_GET</strong> and <strong>$_POST</strong>.
+      </p>
+    </div>
+
+    <!-- 5 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-indigo-700 mb-3">➕ 5. Operators</h3>
+      <ul class="list-disc pl-6 text-gray-700 space-y-1">
+        <li>Arithmetic: +, -, *, /, %</li>
+        <li>Comparison: ==, !=, &gt;, &lt;</li>
+        <li>Logical: &&, ||, !</li>
+        <li>Assignment: =, +=, -=</li>
+      </ul>
+    </div>
+
+    <!-- 6 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-indigo-700 mb-3">🔁 6. Conditional Statements</h3>
+      <pre class="bg-gray-900 text-indigo-300 p-4 rounded-lg overflow-auto text-sm">
+$age = 20;
+if($age >= 18){
+  echo "Adult";
+}else{
+  echo "Minor";
+}
+      </pre>
+    </div>
+
+    <!-- 7 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-indigo-700 mb-3">🔄 7. Loops</h3>
+      <pre class="bg-gray-900 text-indigo-300 p-4 rounded-lg overflow-auto text-sm">
+for($i=1; $i<=5; $i++){
+  echo $i;
+}
+
+$i = 1;
+while($i <= 5){
+  echo $i;
+  $i++;
+}
+      </pre>
+    </div>
+
+    <!-- 8 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-indigo-700 mb-3">📦 8. Functions</h3>
+      <pre class="bg-gray-900 text-indigo-300 p-4 rounded-lg overflow-auto text-sm">
+function add($a, $b){
+  return $a + $b;
+}
+      </pre>
+    </div>
+
+    <!-- 9 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-indigo-700 mb-3">📚 9. Arrays</h3>
+      <pre class="bg-gray-900 text-indigo-300 p-4 rounded-lg overflow-auto text-sm">
+$numbers = array(1,2,3);
+echo $numbers[0];
+      </pre>
+    </div>
+
+    <!-- 10 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-indigo-700 mb-3">🗂 10. Classes & Objects</h3>
+      <pre class="bg-gray-900 text-indigo-300 p-4 rounded-lg overflow-auto text-sm">
+class Student {
+  public $name;
+  public $age;
+}
+      </pre>
+      <p class="text-gray-700 mt-2">
+        PHP supports Object-Oriented Programming.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Back Button -->
+<div class="text-center my-10">
+  <a href="http://127.0.0.1:5500/dist/index.html"
+     class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl shadow-lg transition">
+    ⬅️ Back to Home
+  </a>
+</div>
+
+<footer class="bg-indigo-600 text-white text-center py-4">
+  <p>&copy; 2025 PROlab | Learn. Code. Grow.</p>
+</footer>
+
+</body>
+</html>

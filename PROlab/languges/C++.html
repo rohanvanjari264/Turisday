@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C++ Notes | PROlab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 to-orange-50 text-gray-800 pt-20">
+
+<!-- Header -->
+<header class="bg-gradient-to-r from-orange-700 to-amber-600 text-white py-8 shadow-lg">
+  <div class="container mx-auto px-6">
+    <h1 class="text-4xl font-extrabold">💻 C++ Notes</h1>
+    <p class="text-orange-100 mt-2 text-lg">
+      Learn C++ Programming from Basics to Advanced – PROlab
+    </p>
+  </div>
+</header>
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full bg-black border-b border-gray-700 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="http://127.0.0.1:5500/dist/index.html"
+       class="text-yellow-400 font-bold text-xl flex items-center gap-2">
+      <i class="fa fa-house"></i> PROLAB
+    </a>
+
+    <div class="space-x-6 text-gray-300">
+      <a href="http://127.0.0.1:5500/dist/OurCources.html" class="hover:text-yellow-400">Courses</a>
+      <a href="http://127.0.0.1:5500/dist/comingsoonpage.html" class="hover:text-yellow-400">Roadmap</a>
+      <a href="http://127.0.0.1:5500/dist/index.html#contact" class="hover:text-yellow-400">Contact</a>
+
+      <!-- Try Yourself -->
+      <a href="http://127.0.0.1:5500/dist/TryYourSelf/C++_tryyourself.html"
+         class="ml-4 bg-orange-600 hover:bg-orange-700 text-white
+                px-4 py-2 rounded-lg font-semibold shadow-md transition">
+        ▶ Try Yourself
+      </a>
+    </div>
+  </div>
+</nav>
+
+<section class="py-14 px-4 md:px-12 lg:px-24">
+  <h2 class="text-4xl font-bold text-center text-orange-700 mb-12">
+    📘 C++ Programming Language – Detailed Notes
+  </h2>
+
+  <div class="space-y-10">
+
+    <!-- 1 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-orange-700 mb-3">📌 1. What is C++?</h3>
+      <p class="text-gray-700 mb-3">
+        C++ is a <strong>high-level, object-oriented, compiled programming language</strong>
+        used to create fast and efficient software.
+      </p>
+      <ul class="list-disc pl-6 space-y-1 text-gray-700">
+        <br><h4>Explanation:</h4>
+        <li><strong>Compiled:</strong> Converts code to machine language.</li>
+        <li><strong>Object-Oriented:</strong> Uses classes & objects.</li>
+        <li><strong>Fast:</strong> High performance.</li>
+        <li><strong>Memory Control:</strong> Supports pointers.</li>
+        <li><strong>Applications:</strong> Games, OS, Software, Embedded.</li>
+      </ul>
+    </div>
+
+    <!-- 2 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-orange-700 mb-3">🧾 2. First C++ Program</h3>
+      <pre class="bg-gray-900 text-orange-300 p-4 rounded-lg overflow-auto text-sm">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, World!";
+    return 0;
+}
+      </pre>
+      <p class="text-gray-700 mt-2">
+        <br><h4>Explanation:</h4>
+        <strong>cout</strong> is used to display output.
+      </p>
+    </div>
+
+    <!-- 3 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-orange-700 mb-3">🔢 3. Variables & Data Types</h3>
+      <pre class="bg-gray-900 text-orange-300 p-4 rounded-lg overflow-auto text-sm">
+string name = "Alice";
+int age = 25;
+double height = 5.6;
+bool isActive = true;
+      </pre>
+      <p class="text-gray-700 mt-2">
+        <br><h4>Explanation:</h4>
+        C++ is <strong>statically typed</strong>, so variables must be declared.
+      </p>
+      <ul class="list-disc pl-6 text-gray-700 mt-2">
+        <li><strong>string</strong> – Text</li>
+        <li><strong>int</strong> – Integer values</li>
+        <li><strong>double</strong> – Decimal numbers</li>
+        <li><strong>bool</strong> – true / false</li>
+      </ul>
+    </div>
+
+    <!-- 4 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-orange-700 mb-3">📥 4. Input & Output</h3>
+      <pre class="bg-gray-900 text-orange-300 p-4 rounded-lg overflow-auto text-sm">
+string name;
+cin >> name;
+cout << "Hello " << name;
+      </pre>
+      <p class="text-gray-700 mt-2"><br>
+        <h4>Explanation:</h4>
+        <strong>cin</strong> takes input, <strong>cout</strong> prints output.
+      </p>
+    </div>
+
+    <!-- 5 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-orange-700 mb-3">➕ 5. Operators</h3>
+      <ul class="list-disc pl-6 text-gray-700 space-y-1">
+        <li><strong>Arithmetic:</strong> +, -, *, /, %</li>
+        <li><strong>Relational:</strong> ==, !=, &gt;, &lt;, &gt;=</li>
+        <li><strong>Logical:</strong> &&, ||, !</li>
+        <li><strong>Assignment:</strong> =, +=, -=</li>
+      </ul>
+    </div>
+
+    <!-- 6 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-orange-700 mb-3">🔁 6. Conditional Statements</h3>
+      <pre class="bg-gray-900 text-orange-300 p-4 rounded-lg overflow-auto text-sm">
+int age = 20;
+if(age >= 18) {
+    cout << "Adult";
+} else {
+    cout << "Minor";
+}
+      </pre>
+    </div>
+
+    <!-- 7 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-orange-700 mb-3">🔄 7. Loops</h3>
+      <pre class="bg-gray-900 text-orange-300 p-4 rounded-lg overflow-auto text-sm">
+for(int i = 1; i <= 5; i++) {
+    cout << i;
+}
+
+int i = 1;
+while(i <= 5) {
+    cout << i;
+    i++;
+}
+      </pre>
+    </div>
+
+    <!-- 8 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-orange-700 mb-3">📦 8. Functions</h3>
+      <pre class="bg-gray-900 text-orange-300 p-4 rounded-lg overflow-auto text-sm">
+int add(int a, int b) {
+    return a + b;
+}
+      </pre>
+    </div>
+
+    <!-- 9 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-orange-700 mb-3">📚 9. Arrays</h3>
+      <pre class="bg-gray-900 text-orange-300 p-4 rounded-lg overflow-auto text-sm">
+int arr[3] = {1, 2, 3};
+      </pre>
+    </div>
+
+    <!-- 10 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-orange-700 mb-3">🗂 10. Classes & Objects</h3>
+      <pre class="bg-gray-900 text-orange-300 p-4 rounded-lg overflow-auto text-sm">
+class Student {
+public:
+    string name;
+    int age;
+};
+      </pre>
+    </div>
+
+  </div>
+</section>
+
+<!-- Back Button -->
+<div class="text-center my-10">
+  <a href="http://127.0.0.1:5500/dist/index.html"
+     class="inline-block bg-orange-600 hover:bg-orange-700
+            text-white px-6 py-3 rounded-xl shadow-lg transition">
+    ⬅️ Back to Home
+  </a>
+</div>
+
+<footer class="bg-orange-700 text-white text-center py-4">
+  <p>&copy; 2025 PROlab | Learn. Code. Grow.</p>
+</footer>
+
+</body>
+</html>

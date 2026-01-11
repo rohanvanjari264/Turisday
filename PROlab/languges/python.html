@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python Notes | PROlab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 to-green-50 text-gray-800 pt-20">
+
+<!-- Header -->
+<header class="bg-gradient-to-r from-green-600 to-emerald-500 text-white py-8 shadow-lg">
+  <div class="container mx-auto px-6">
+    <h1 class="text-4xl font-extrabold">🐍 Python Notes</h1>
+    <p class="text-green-100 mt-2 text-lg">
+      Learn Python Programming from Basics to Advanced – PROlab
+    </p>
+  </div>
+</header>
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full bg-black border-b border-gray-700 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="http://127.0.0.1:5500/dist/index.html" class="text-yellow-400 font-bold text-xl flex items-center gap-2">
+      <i class="fa fa-house"></i> PROLAB
+    </a>
+    <div class="space-x-6 text-gray-300">
+      <a href="http://127.0.0.1:5500/dist/OurCources.html" class="hover:text-yellow-400">Courses</a>
+      <a href="http://127.0.0.1:5500/dist/comingsoonpage.html" class="hover:text-yellow-400">Roadmap</a>
+      <a href="http://127.0.0.1:5500/dist/index.html#contact" class="hover:text-yellow-400">Contact</a>
+     <!-- Try Yourself -->
+   <a href="http://127.0.0.1:5500/dist/TryYourSelf/Python_tryyourself.html"
+         class="ml-4 bg-orange-600 hover:bg-orange-700 text-white
+                px-4 py-2 rounded-lg font-semibold shadow-md transition">
+        ▶ Try Yourself
+      </a>
+</div>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<section class="py-14 px-4 md:px-12 lg:px-24">
+  <h2 class="text-4xl font-bold text-center text-green-700 mb-12">
+    📘 Python Programming Language – Detailed Notes
+  </h2>
+
+  <div class="space-y-10">
+
+    <!-- 1 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">📌 1. What is Python?</h3>
+      <p class="text-gray-700 mb-3">
+        Python is a <strong>high-level, interpreted, general-purpose programming language</strong>
+        designed to emphasize <strong>code readability</strong> and <strong>developer productivity</strong>.
+      </p>
+      <ul class="list-disc pl-6 space-y-1 text-gray-700">
+        <br><h4>Explanation:</h4>
+        <li><strong>High-level:</strong> No need to manage memory manually.</li>
+        <li><strong>Interpreted:</strong> Executes code line-by-line.</li>
+        <li><strong>Simple syntax:</strong> English-like and easy to learn.</li>
+        <li><strong>Cross-platform:</strong> Runs on Windows, Linux, macOS.</li>
+        <li><strong>Applications:</strong> Web, AI/ML, Data Science, Automation, IoT.</li>
+      </ul>
+    </div>
+
+    <!-- 2 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">🧾 2. First Python Program</h3>
+      <pre class="bg-gray-900 text-green-300 p-4 rounded-lg overflow-auto text-sm">
+print("Hello, World!")
+      </pre>
+      <p class="text-gray-700 mt-2">
+        <br><h4>Explanation:</h4>
+        <strong>print()</strong> is a built-in function that displays output on the screen.
+        This program confirms Python is installed correctly.
+      </p>
+    </div>
+
+    <!-- 3 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">🔢 3. Variables & Data Types</h3>
+      <pre class="bg-gray-900 text-green-300 p-4 rounded-lg overflow-auto text-sm">
+name = "Alice"
+age = 25
+height = 5.6
+is_active = True
+      </pre>
+      <p class="text-gray-700 mt-2">
+        <br><h4>Explanation:</h4>
+        Variables store data in memory. Python is <strong>dynamically typed</strong>,
+        so data types are assigned automatically.
+      </p>
+      <ul class="list-disc pl-6 text-gray-700 mt-2">
+        <h4>Explanation:</h4>
+        <li><strong>str</strong> – Text</li>
+        <li><strong>int</strong> – Integers</li>
+        <li><strong>float</strong> – Decimal numbers</li>
+        <li><strong>bool</strong> – True / False</li>
+      </ul>
+    </div>
+
+    <!-- 4 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">📥 4. Input & Output</h3>
+      <pre class="bg-gray-900 text-green-300 p-4 rounded-lg overflow-auto text-sm">
+name = input("Enter your name: ")
+print("Hello", name)
+      </pre>
+      <p class="text-gray-700 mt-2"><br>
+        <h4>Explanation:</h4>
+        <strong>input()</strong> accepts user input as a string.
+        <strong>print()</strong> outputs data to the console.
+      </p>
+    </div>
+
+    <!-- 5 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">➕ 5. Operators</h3>
+      <ul class="list-disc pl-6 text-gray-700 space-y-1">
+        <li><strong>Arithmetic:</strong> +, -, *, /, %, **</li>
+        <li><strong>Relational:</strong> ==, !=, &gt;, &lt;, &gt;=</li>
+        <li><strong>Logical:</strong> and, or, not</li>
+        <li><strong>Assignment:</strong> =, +=, -=</li>
+      </ul>
+    </div>
+
+    <!-- 6 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">🔁 6. Conditional Statements</h3>
+      <pre class="bg-gray-900 text-green-300 p-4 rounded-lg overflow-auto text-sm">
+age = 20
+if age >= 18:
+    print("Adult")
+elif age >= 13:
+    print("Teenager")
+else:
+    print("Child")
+      </pre>
+      <p class="text-gray-700 mt-2"><br>
+        <h4>Explanation:</h4>
+        Conditional statements allow decision-making based on conditions.
+        Only one block executes.
+      </p>
+    </div>
+
+    <!-- 7 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">🔄 7. Loops</h3>
+      <pre class="bg-gray-900 text-green-300 p-4 rounded-lg overflow-auto text-sm">
+for i in range(1, 6):
+    print(i)
+
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+      </pre>
+      <p class="text-gray-700 mt-2"><br>
+        <h4>Explanation:</h4>
+        1.Loops repeat a block of code.<br> 2.for loop is used when the number of iterations is known. 
+        <br>3 while loop runs until a condition becomes false. <strong>for</strong> when iterations are known,
+        <strong>while</strong> when condition-based.
+      </p>
+    </div>
+
+    <!-- 8 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">📦 8. Functions</h3>
+      <pre class="bg-gray-900 text-green-300 p-4 rounded-lg overflow-auto text-sm">
+def add(a, b):
+    return a + b
+      </pre>
+      <p class="text-gray-700 mt-2">
+        <br>
+        <h4>Explanation:</h4>
+        1.Functions are reusable blocks of code. 
+<br>2.Improve modularity and readability. 
+<br>3.return sends a value back to the caller.      </p>
+    </div>
+
+    <!-- 9 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">📚 9. Lists, Tuples & Sets</h3>
+      <pre class="bg-gray-900 text-green-300 p-4 rounded-lg overflow-auto text-sm">
+fruits = ["apple", "banana"]
+numbers = (1, 2, 3)
+unique = {1, 2, 3}
+      </pre>
+      <p class="text-gray-700 mt-2">
+        <br>
+        <h4>Explanation:</h4>
+1.**List**: Ordered, mutable collection. <br>2.
+ **Tuple**: Ordered, immutable collection. 
+<br>3.**Set**: Unordered, unique elements only.      </p>
+    </div>
+
+    <!-- 10 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">🗂 10. Dictionaries</h3>
+      <pre class="bg-gray-900 text-green-300 p-4 rounded-lg overflow-auto text-sm">
+student = {"name": "John", "age": 21}
+      </pre>
+      <br>
+
+      <p class="text-gray-700 mt-2">
+        <h4>Explanation:</h4> 
+        1.Stores data as **key-value pairs**. <br>2.Keys must be unique. <br>3.Very fast data access.
+      </p>
+    </div>
+
+    <!-- 11 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">🧱 11. Classes & Objects</h3>
+      <pre class="bg-gray-900 text-green-300 p-4 rounded-lg overflow-auto text-sm">
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+      </pre>
+      <p class="text-gray-700"><br>
+
+      <h4>Explanation:</h4> 1.Class is a **blueprint** for objects.<br>
+        2.Object is an **instance** of a class. <br>3.__init__() is a constructor. <br>
+        4.self refers to the current object.
+        <strong>self</strong> refers to the current object.
+      </p>
+    </div>
+
+    <!-- 12 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">📂 12. File Handling</h3>
+      <pre class="bg-gray-900 text-green-300 p-4 rounded-lg overflow-auto text-sm">
+with open("file.txt", "r") as f:
+    content = f.read()
+      </pre><br>
+      <p class="text-gray-700">
+        <h4>Explanation:</h4>
+        1,Used to store data permanently. <br>2.w → write mode, r → read mode. 
+        <br> 3.with ensures the file is closed automatically.
+        The <strong>with</strong> statement auto-closes files.
+      </p>
+    </div>
+
+    <!-- 13 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-green-600">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">🚀 13. Advanced Topics</h3>
+      <pre></pre>
+      <ul class="list-disc pl-6 text-gray-700">
+        <li>Exception Handling</li>
+        <li>Modules & Packages</li>
+        <li>Virtual Environments</li>
+        <li>NumPy, Pandas</li>
+        <li>Flask & Django</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+<!-- Back Button --> <div class="text-center my-10"> <a href=http://127.0.0.1:5500/dist/index.html class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow-lg transition"> ⬅️ Back to Home </a> </div>
+<!-- Footer -->
+<footer class="bg-green-600 text-white text-center py-4">
+  <p>&copy; 2025 PROlab | Learn. Code. Grow.</p>
+</footer>
+
+</body>
+</html>
+
+
